@@ -1,0 +1,64 @@
+// ======= Imports ======= //
+
+@use "../abstracts/" as *;
+
+// ======= Codes ======= //
+.form {
+  max-width: 62rem;
+  margin: $space48 auto 0;
+  @include responsive(1000) {
+    padding: 0 $space32;
+  }
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  &__col-2 {
+    flex: 0 0 49%;
+  }
+  &__group {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: $space24;
+  }
+  &__label {
+    display: block;
+    margin-left: $space12;
+    margin-bottom: $space12;
+    font-size: $size20;
+    text-transform: capitalize;
+  }
+  &__input-text {
+    display: block;
+    width: 100%;
+    padding: $space12 $space16;
+    background-color: $grey-ll;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    box-shadow: $shadow-s;
+    transition: $transition-s;
+    &:focus,
+    &:active {
+      outline: none;
+      transform: translateY(-3px);
+      box-shadow: $shadow-l;
+      border-bottom: 3px solid $color-pd;
+    }
+    &:focus:invalid {
+      border-bottom: 3px solid $color-se;
+    }
+    &::placeholder {
+      color: $grey-dl;
+      text-transform: capitalize;
+    }
+  }
+  &__textarea {
+    height: 20rem;
+  }
+}

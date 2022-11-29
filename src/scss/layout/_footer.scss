@@ -1,0 +1,39 @@
+// ======= Imports ======= //
+
+@use "../abstracts/" as *;
+
+// ======= Codes ======= //
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $space80 0;
+  background-color: $grey-dd;
+  color: $grey-ll;
+  @include responsive(1000) {
+    padding: $space80 $space32;
+  }
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      display: inline-block;
+      padding: $space4 $space2;
+      border: none;
+      color: $color-pr;
+      text-decoration: none;
+      cursor: pointer;
+      transition: $transition-s;
+      outline: 2px dashed transparent;
+    }
+    &:hover {
+      background-color: $color-pl;
+    }
+    &:active,
+    &:focus {
+      outline: 2px dashed $grey-dd;
+      outline-offset: 2px;
+    }
+  }
+}

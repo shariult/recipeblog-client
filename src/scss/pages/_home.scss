@@ -1,0 +1,25 @@
+// ======= Imports ======= //
+
+@use "../abstracts/" as *;
+
+// ======= Codes ======= //
+
+.section-recipes {
+  padding: 0 0 $space128;
+}
+
+.section-user {
+  padding: 0 0 $space128;
+}
+
+.section-error {
+  padding: $space24 0;
+  margin-bottom: $space48;
+  background-color: crimson;
+  .error {
+    color: $grey-ll;
+    font-size: $size24;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}

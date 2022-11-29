@@ -1,0 +1,64 @@
+// ======= Imports ======= //
+
+@use "../abstracts/" as *;
+
+@font-face {
+  font-family: "Jost";
+  src: url("../vendor/fonts/Jost-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("../vendor/fonts/Jost-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("../vendor/fonts/Jost-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+// ======= Codes ======= //
+
+$font-heading: "Jost", sans-serif;
+$font-paragraph: "Jost", sans-serif;
+
+// Setting Fonts
+body {
+  color: $grey-dd;
+  font-family: $font-paragraph;
+  font-size: $size16;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+}
+
+.heading-1 {
+  color: $color-pr;
+  font-size: $size52;
+  text-transform: uppercase;
+}
+
+.heading-2 {
+  margin-bottom: $space16;
+  color: $color-pr;
+  font-size: $size36;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.heading-3 {
+  font-size: $size30;
+  font-weight: 400;
+}

@@ -1,0 +1,138 @@
+// ======= Imports ======= //
+
+@use "../abstracts/" as *;
+
+// ======= Codes ======= //
+
+.navbar {
+  width: 100%;
+  background-color: $grey-ll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include responsive(1440) {
+      padding: 0 $space24;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    color: $color-pr;
+    font-size: $size24;
+    font-style: normal;
+    text-transform: uppercase;
+    @include flexCenter;
+  }
+  &__checkbox {
+    display: none;
+  }
+  &__checkbox:checked ~ &__list {
+    transform: scaleY(1);
+  }
+  &__icon-box {
+    display: none;
+    width: 46px;
+    height: 42px;
+    margin: $space12 0;
+    background-color: $grey-lm;
+    border-radius: $border-rad-s;
+    box-shadow: $shadow-s;
+    position: relative;
+    transition: $transition-s;
+    &:hover {
+      transform: scale(1.08);
+      cursor: pointer;
+    }
+    @include responsive(800) {
+      display: inline-block;
+    }
+  }
+  &__icon {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: $grey-dd;
+    @include positionCenter;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: $grey-dd;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      top: -8px;
+    }
+    &::after {
+      top: 8px;
+    }
+  }
+  &__list {
+    list-style: none;
+    margin-left: auto;
+    transform-origin: top;
+    transition: $transition-s;
+    @include responsive(800) {
+      transform: scaleY(0);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: $grey-ll;
+      position: absolute;
+      top: 99%;
+      left: 0;
+    }
+  }
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      display: inline-block;
+      padding: $space16 $space24;
+      border: none;
+      color: $grey-dd;
+      font-size: $size16;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: $transition-s;
+      outline: 2px dashed transparent;
+      @include responsive(800) {
+        display: block;
+        text-align: center;
+      }
+    }
+    &:hover {
+      background: $color-pr;
+      color: $grey-ll;
+    }
+    &:active,
+    &:focus {
+      outline: 2px dashed $grey-dd;
+      outline-offset: 2px;
+    }
+  }
+  &__logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+  }
+  &__profile-image {
+    width: $size30;
+    height: $size30;
+    margin-left: $space12;
+    border-radius: 50%;
+  }
+}

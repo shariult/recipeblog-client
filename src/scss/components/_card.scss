@@ -1,0 +1,46 @@
+// ======= Imports ======= //
+
+@use "../abstracts/" as *;
+
+// ======= Codes ======= //
+
+$card-width: 90%;
+
+.cards--container {
+  display: flex;
+  flex-flow: row wrap;
+  &:not(:last-child) {
+    margin-bottom: $gutter-row;
+    @include responsive(800) {
+      margin-bottom: calc(#{$gutter-row} - 3.2rem);
+    }
+  }
+  .card {
+    &--2 {
+      width: calc(#{$card-width} / 2);
+      margin: calc((100% - #{$card-width}) / 4);
+    }
+    &--3 {
+      width: calc(#{$card-width} / 3);
+      margin: calc((100% - #{$card-width}) / 6);
+    }
+    &--4 {
+      width: calc(#{$card-width} / 4);
+      margin: calc((100% - #{$card-width}) / 8);
+    }
+    &--5 {
+      width: calc(#{$card-width} / 5);
+      margin: calc((100% - #{$card-width}) / 10);
+    }
+  }
+  [class^="card--"] {
+    @include responsive(1000) {
+      width: calc(#{$card-width} / 2);
+      margin: calc((100% - #{$card-width}) / 4);
+    }
+    @include responsive(800) {
+      width: calc(#{$card-width} / 1);
+      margin: calc((100% - #{$card-width}) / 2);
+    }
+  }
+}

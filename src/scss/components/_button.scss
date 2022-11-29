@@ -1,0 +1,57 @@
+// ======= Imports ======= //
+
+@use "../abstracts/" as *;
+
+// ======= Codes ======= //
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: $space16 $space24;
+    border: none;
+    border-radius: $border-rad-s;
+    color: $grey-dd;
+    font-size: $size16;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 2px dashed transparent;
+    box-shadow: $shadow-l;
+    transition: $transition-s;
+  }
+  &:hover {
+    transform: translateY(4px);
+    box-shadow: $shadow-s;
+  }
+  &:active,
+  &:focus {
+    outline: 2px dashed $grey-dd;
+    outline-offset: 2px;
+  }
+  &--full,
+  &--full:link,
+  &--full:visited {
+    width: 100%;
+    text-align: center;
+  }
+  &--primary,
+  &--primary:link,
+  &--primary:visited {
+    background-color: $color-pr;
+    color: $grey-ll;
+  }
+  &--secondary,
+  &--secondary:link,
+  &--secondary:visited {
+    background-color: crimson;
+    color: $grey-ll;
+  }
+  &--secondary:hover {
+    background-color: lighten(crimson, 5%);
+  }
+  &--delete {
+    float: right;
+  }
+}

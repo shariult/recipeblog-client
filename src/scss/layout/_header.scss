@@ -1,0 +1,22 @@
+// ======= Imports ======= //
+
+@use "../abstracts/" as *;
+
+// ======= Codes ======= //
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 70vh;
+  background: url("../../assets/hero-1.jpg") center/cover no-repeat;
+  &__text-box {
+    padding: $space32;
+    background-color: rgba($color-pl, 0.8);
+    color: $grey-dm;
+  }
+  &__text {
+    text-transform: uppercase;
+    letter-spacing: $space8;
+  }
+}

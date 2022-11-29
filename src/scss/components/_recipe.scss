@@ -1,0 +1,78 @@
+// ======= Imports ======= //
+
+@use "../abstracts/" as *;
+
+// ======= Codes ======= //
+
+.recipe {
+  background-color: $grey-ll;
+  border-radius: $border-rad-s;
+  overflow: hidden;
+  transition: $transition-s;
+  &:hover {
+    transform: translateY(-0.8rem) scale(1.03);
+    box-shadow: $shadow-l;
+    z-index: -1;
+  }
+  &:hover &__img {
+    transform: scale(1.07);
+  }
+  &__img-box {
+    height: 40rem;
+    overflow: hidden;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+    transition: $transition-s;
+  }
+  &__text-box {
+    padding: $space12 $space16;
+  }
+  &__author {
+    font-size: $size14;
+    span {
+      color: $color-pr;
+    }
+  }
+  &__info-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: $space16 0;
+    font-size: $size16;
+  }
+  &__info {
+    flex: 0 0 49%;
+    display: flex;
+    align-items: center;
+    padding: $space4 $space8;
+    background-color: $color-pl;
+    span {
+      margin: 0 $space4;
+      color: $grey-dd;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  &__container {
+    max-width: 86rem;
+    margin: 0 auto;
+    padding: $space32 0 $space128;
+    @include responsive(1000) {
+      padding: $space32 $space32 $space128;
+    }
+  }
+  &__list {
+    list-style-position: inside;
+    font-size: $size20;
+  }
+  &__ing {
+    columns: 2;
+    @include responsive(800) {
+      columns: 1;
+    }
+  }
+}
