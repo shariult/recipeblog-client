@@ -1,0 +1,119 @@
+// ======= Import ======= //
+
+@use "sass:math";
+@use "./abstracts.scss" as *;
+
+// ======= Base ======= //
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; // Set 1rem = 10px (10/16*100)
+}
+body {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+$font-heading: "Jost", sans-serif;
+$font-paragraph: "Jost", sans-serif;
+
+// Setting Fonts
+body {
+  color: $grey-dd;
+  font-family: $font-paragraph;
+  font-size: $size16;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+}
+
+// ======= Utility Classes ======= //
+
+$spaceAmounts: (12, 24, 48, 64);
+@each $space in $spaceAmounts {
+  // Margins
+  .m-#{$space} {
+    margin: #{math.div($space, 10)}rem;
+  }
+  .mx-#{$space} {
+    margin-right: #{math.div($space, 10)}rem;
+    margin-left: #{math.div($space, 10)}rem;
+  }
+  .my-#{$space} {
+    margin-top: #{math.div($space, 10)}rem;
+    margin-bottom: #{math.div($space, 10)}rem;
+  }
+  .mt-#{$space} {
+    margin-top: #{math.div($space, 10)}rem;
+  }
+  .mr-#{$space} {
+    margin-right: #{math.div($space, 10)}rem;
+  }
+  .mb-#{$space} {
+    margin-bottom: #{math.div($space, 10)}rem;
+  }
+  .ml-#{$space} {
+    margin-left: #{math.div($space, 10)}rem;
+  }
+
+  // Paddings
+  .p-#{$space} {
+    padding: #{math.div($space, 10)}rem;
+  }
+  .px-#{$space} {
+    padding-right: #{math.div($space, 10)}rem;
+    padding-left: #{math.div($space, 10)}rem;
+  }
+  .py-#{$space} {
+    padding-top: #{math.div($space, 10)}rem;
+    padding-bottom: #{math.div($space, 10)}rem;
+  }
+  .pt-#{$space} {
+    padding-top: #{math.div($space, 10)}rem;
+  }
+  .pr-#{$space} {
+    padding-right: #{math.div($space, 10)}rem;
+  }
+  .pb-#{$space} {
+    padding-bottom: #{math.div($space, 10)}rem;
+  }
+  .pl-#{$space} {
+    padding-left: #{math.div($space, 10)}rem;
+  }
+}
+
+.text--center {
+  text-align: center;
+}
