@@ -1,0 +1,13 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space16;
+  & .form__group {
+    flex-basis: 100%;
+    &--inline {
+      flex-basis: calc(50% - (#{$space16} / 2));
+    }
+  }
+}

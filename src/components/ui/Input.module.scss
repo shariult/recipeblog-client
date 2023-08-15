@@ -1,0 +1,60 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+$form-border-width: 2px;
+$form-border-radius: 4px;
+
+.form__group {
+  flex-basis: 100%;
+  &--inline {
+    flex-basis: calc(50% - (#{$space16} / 2));
+  }
+}
+
+.form__input,
+.form__textarea {
+  display: block;
+  width: 100%;
+  padding: $padding-s;
+  border: none;
+  border-bottom: $form-border-width solid transparent;
+  border-radius: $form-border-radius;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  box-shadow: $shadow-s;
+  transition: $transition-s;
+
+  &-error {
+    margin: $space8;
+    color: $color-se;
+  }
+
+  &:focus {
+    border-bottom: $form-border-width solid $color-pr;
+    outline: none;
+  }
+
+  &:focus:required:invalid {
+    border-bottom: $form-border-width solid $color-se;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $grey-33;
+    text-transform: capitalize;
+    opacity: 0.6;
+  }
+}
+
+.form__label {
+  display: block;
+  margin-bottom: $space12;
+  font-size: inherit;
+  font-weight: bold;
+  transition: $transition-s;
+}
+
+.form__input:placeholder-shown ~ .form__label {
+  opacity: 0;
+  visibility: hidden;
+  // transform: translateY(-4rem);
+}

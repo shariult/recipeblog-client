@@ -1,0 +1,26 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+.modal {
+  &__backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: $grey-33;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 93;
+  }
+  &__card {
+    max-width: 80rem;
+    padding: $padding-l;
+    background-color: $grey-f7;
+    border-radius: $border-rad-s;
+    box-shadow: $shadow-l;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 95;
+  }
+}

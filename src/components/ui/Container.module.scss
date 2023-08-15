@@ -1,0 +1,6 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+.container {
+  max-width: $grid-width;
+  margin: 0 auto;
+}
