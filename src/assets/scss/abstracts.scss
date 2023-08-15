@@ -31,29 +31,36 @@ $size98: 9.8rem;
 // ======= Color Palette ======= //
 
 // Primary Color
-$color-pr: #55c57a;
+$color-pr: #ffb900;
 
 // Tints
-$color-pl: #7ed56f;
-$color-pd: #28b485;
+$color-pl: #ffd566;
+$color-pd: #ff7730;
 
 // Shades or Accent Color
 $color-sl: #ffd566;
 $color-se: #ffb900;
 $color-sd: #ff7730;
 
-// Grey Light
-$grey-ll: #f8f9fa;
-$grey-lm: #f1f3f5;
-$grey-ld: #dee2e6;
-
-// Grey Dark
-$grey-dl: #868e96;
-$grey-dm: #495057;
-$grey-dd: #444444;
-
-$black: #000000;
+// Grey
 $white: #ffffff;
+$grey-f7: #f7f7f7;
+$grey-ee: #eeeeee;
+$grey-e3: #e3e3e3;
+$grey-dd: #dddddd;
+$grey-cc: #cccccc;
+$grey-bb: #bbbbbb;
+$grey-aa: #aaaaaa;
+$grey-99: #999999;
+$grey-88: #888888;
+$grey-77: #777777;
+$grey-66: #666666;
+$grey-55: #555555;
+$grey-44: #444444;
+$grey-33: #333333;
+$grey-22: #222222;
+$grey-11: #111111;
+$black: #000000;
 
 // ======= Shadows ======= //
 
@@ -85,11 +92,12 @@ $space160: 16rem;
 
 // ======= Padding ======= //
 
-$padding-s: $space8 $space12;
-$padding-m: $space12 $space16;
-$padding-l: $space16 $space24;
-$padding-xl: $space24 $space32;
-$padding-xxl: $space32 $space48;
+$padding-xs: $space8 $space12;
+$padding-sm: $space12 $space16;
+$padding-md: $space16 $space24;
+$padding-lg: $space24 $space32;
+$padding-xl: $space32 $space48;
+$padding-xxl: $space48 $space64;
 
 // ======= Grid ======= //
 

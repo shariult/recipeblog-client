@@ -1,0 +1,136 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+.navbar {
+  width: 100%;
+  background: $grey-33;
+  color: $grey-f7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  &__nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include responsive(1440) {
+      padding: 0 $space24;
+    }
+  }
+  &__logo {
+    max-height: $size30;
+    max-width: $size30;
+    margin: $space12 0;
+    &-img {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    list-style-position: inside;
+    @include responsive(800) {
+      flex-flow: column nowrap;
+      width: 100%;
+      background: $grey-33;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      opacity: 0;
+      transform-origin: top center;
+      transform: scaleY(0);
+      transition: $transition-s;
+    }
+  }
+  &__item {
+    @include responsive(800) {
+      padding: $padding-md;
+    }
+  }
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: $padding-md;
+      border: none;
+      outline: 2px dashed transparent;
+      color: inherit;
+      font-size: $size16;
+      text-decoration: none;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: $transition-s;
+      @include responsive(800) {
+        width: 100%;
+      }
+    }
+    &:hover {
+      background: $grey-44;
+    }
+    &:active,
+    &:focus {
+      background: $grey-f7;
+      outline: 2px dashed $grey-f7;
+      color: $grey-33;
+    }
+  }
+  &__toggle {
+    align-self: center;
+    display: none;
+    height: 5rem;
+    width: 5rem;
+    background: $grey-44;
+    border-radius: $border-rad-s;
+    cursor: pointer;
+    @include responsive(800) {
+      @include flexCenter;
+    }
+  }
+  &__toggle--open {
+    @include responsive(800) {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+  &__toggle-icon {
+    display: block;
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $grey-f7;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: $transition-s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+  &__toggle--open + &__toggle &__toggle-icon {
+    background-color: transparent;
+  }
+  &__toggle--open + &__toggle &__toggle-icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__toggle--open + &__toggle &__toggle-icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

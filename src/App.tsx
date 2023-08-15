@@ -1,10 +1,22 @@
 import React from "react";
-import { API_ENDPOINTS } from "./data/client/endpoint";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Pages/Home";
+import ErrorPage from "./components/Pages/ErrorPage";
+import RootLayout from "./components/Pages/RootLayout";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    errorElement: <ErrorPage />,
+    element: <RootLayout />,
+    children: [{ index: true, element: <Home /> }],
+  },
+]);
 
 function App() {
   return (
     <div>
-      <h1>Welcome To React!</h1>
+      <RouterProvider router={router} />
     </div>
   );
 }
