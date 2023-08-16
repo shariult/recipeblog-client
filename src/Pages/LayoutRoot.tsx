@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router";
-import Container from "../ui/Container";
-import NavBar from "../layout/NavBar";
+import Container from "../components/ui/Container";
+import NavBar from "../components/layout/NavBar";
 
 import styles from "./LayoutRoot.module.scss";
 
