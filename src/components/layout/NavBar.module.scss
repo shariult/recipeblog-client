@@ -2,8 +2,8 @@
 
 .navbar {
   width: 100%;
-  background: $grey-33;
-  color: $grey-f7;
+  // background: $grey-33;
+  // color: $grey-f7;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,9 +17,16 @@
     }
   }
   &__logo {
-    max-height: $size30;
-    max-width: $size30;
+    // max-height: $size30;
+    // max-width: $size30;
     margin: $space12 0;
+    &-link {
+      font-size: $size20;
+      color: crimson;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
     &-img {
       display: inline-block;
       width: 100%;
@@ -69,7 +76,7 @@
       }
     }
     &:hover {
-      background: $grey-44;
+      background: $grey-f7;
     }
     &:active,
     &:focus {

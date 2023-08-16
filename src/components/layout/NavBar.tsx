@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Container from "../ui/Container";
 
 import styles from "./NavBar.module.scss";
@@ -18,9 +18,9 @@ function NavBar() {
     <nav className={styles["navbar"]}>
       <Container className={styles["navbar__nav"]}>
         <div className={styles["navbar__logo"]}>
-          <a href="index.html" className={styles["navbar__logo-link"]}>
-            <img src="#" className={styles["navbar__logo-img"]} alt="#" />
-          </a>
+          <Link to="/" className={styles["navbar__logo-link"]}>
+            RecipeLog
+          </Link>
         </div>
         <ul
           className={`${styles["navbar__list"]} ${
@@ -38,12 +38,16 @@ function NavBar() {
             </NavLink>
           </li>
           <li className={styles["navbar__item"]}>
-            <NavLink to="/recipe/someId" className={activeNavLinkHandler}>
+            <NavLink to="/recipe/someId" className={activeNavLinkHandler} end>
               RecipeDetails
             </NavLink>
           </li>
           <li className={styles["navbar__item"]}>
-            <NavLink to="/recipe/someId/edit" className={activeNavLinkHandler}>
+            <NavLink
+              to="/recipe/someId/edit"
+              className={activeNavLinkHandler}
+              end
+            >
               Recipe Manage
             </NavLink>
           </li>
@@ -53,21 +57,12 @@ function NavBar() {
               className={activeNavLinkHandler}
               end
             >
-              Sign In
-            </NavLink>
-          </li>
-          <li className={styles["navbar__item"]}>
-            <NavLink
-              to="/user?mode=signup"
-              className={activeNavLinkHandler}
-              end
-            >
-              Sign Up
+              Sign
             </NavLink>
           </li>
           <li className={styles["navbar__item"]}>
             <NavLink to="/user/profile" className={activeNavLinkHandler} end>
-              User Profile
+              Profile
             </NavLink>
           </li>
         </ul>
