@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Container from "../ui/Container";
 
 import styles from "./NavBar.module.scss";
@@ -7,6 +8,11 @@ function NavBar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   function navbarToggleHandler() {
     setIsNavbarOpen((prevState) => !prevState);
+  }
+  function activeNavLinkHandler({ isActive }: { isActive: boolean }) {
+    return isActive
+      ? `${styles["navbar__link"]} ${styles["navbar__link--active"]}`
+      : styles["navbar__link"];
   }
   return (
     <nav className={styles["navbar"]}>
@@ -22,14 +28,47 @@ function NavBar() {
           }`}
         >
           <li className={styles["navbar__item"]}>
-            <a href="#" className={styles["navbar__link"]}>
+            <NavLink to="/" className={activeNavLinkHandler}>
               Home
-            </a>
+            </NavLink>
           </li>
           <li className={styles["navbar__item"]}>
-            <a href="#" className={styles["navbar__link"]}>
-              About
-            </a>
+            <NavLink to="/recipe" className={activeNavLinkHandler} end>
+              Recipe
+            </NavLink>
+          </li>
+          <li className={styles["navbar__item"]}>
+            <NavLink to="/recipe/someId" className={activeNavLinkHandler}>
+              RecipeDetails
+            </NavLink>
+          </li>
+          <li className={styles["navbar__item"]}>
+            <NavLink to="/recipe/someId/edit" className={activeNavLinkHandler}>
+              Recipe Manage
+            </NavLink>
+          </li>
+          <li className={styles["navbar__item"]}>
+            <NavLink
+              to="/user?mode=signin"
+              className={activeNavLinkHandler}
+              end
+            >
+              Sign In
+            </NavLink>
+          </li>
+          <li className={styles["navbar__item"]}>
+            <NavLink
+              to="/user?mode=signup"
+              className={activeNavLinkHandler}
+              end
+            >
+              Sign Up
+            </NavLink>
+          </li>
+          <li className={styles["navbar__item"]}>
+            <NavLink to="/user/profile" className={activeNavLinkHandler} end>
+              User Profile
+            </NavLink>
           </li>
         </ul>
         <div className={styles["navbar__toggle"]} onClick={navbarToggleHandler}>

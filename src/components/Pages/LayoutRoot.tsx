@@ -3,15 +3,17 @@ import { Outlet } from "react-router";
 import Container from "../ui/Container";
 import NavBar from "../layout/NavBar";
 
-function RootLayout() {
+import styles from "./LayoutRoot.module.scss";
+
+function LayoutRoot() {
   return (
     <>
       <NavBar />
-      <Container>
+      <Container className={styles["main"]}>
         <Outlet />
       </Container>
     </>
   );
 }
 
-export default RootLayout;
+export default LayoutRoot;

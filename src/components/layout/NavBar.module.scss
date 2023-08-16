@@ -77,6 +77,10 @@
       outline: 2px dashed $grey-f7;
       color: $grey-33;
     }
+    &--active {
+      font-weight: bold;
+      text-decoration: underline !important;
+    }
   }
   &__toggle {
     align-self: center;
