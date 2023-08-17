@@ -11,7 +11,7 @@ function Container(props: ContainerPropsType) {
   const allClasses = props.className
     ? `${styles["container"]} ${props.className}`
     : `${styles["container"]}`;
-  return <div className={allClasses}>{props.children}</div>;
+  return <main className={allClasses}>{props.children}</main>;
 }
 
 export default Container;
