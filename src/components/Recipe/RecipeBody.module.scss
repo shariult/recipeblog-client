@@ -3,6 +3,9 @@
 .recipe-body {
   display: flex;
   font-size: $size18;
+  @include responsive(800) {
+    flex-direction: column;
+  }
   &__process,
   &__ingredients {
     & > *:not(:last-child) {

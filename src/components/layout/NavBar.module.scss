@@ -39,7 +39,7 @@
     @include responsive(800) {
       flex-flow: column nowrap;
       width: 100%;
-      background: $grey-33;
+      background: $grey-ee;
       position: absolute;
       top: 100%;
       right: 0;
@@ -94,7 +94,7 @@
     display: none;
     height: 5rem;
     width: 5rem;
-    background: $grey-44;
+    background: $grey-77;
     border-radius: $border-rad-s;
     cursor: pointer;
     @include responsive(800) {

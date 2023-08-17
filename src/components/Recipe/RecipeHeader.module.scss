@@ -1,13 +1,15 @@
 @use "../../assets/scss/abstracts.scss" as *;
 
 .recipe-header {
-  &__header {
-    display: flex;
-    align-items: center;
-    gap: $space32;
+  display: flex;
+  align-items: center;
+  gap: $space32;
+  padding: $padding-md;
+  @include responsive(800) {
+    flex-direction: column;
   }
   &__img-box {
-    width: 80rem;
+    flex-basis: 50%;
   }
   &__img {
     display: inline-block;
