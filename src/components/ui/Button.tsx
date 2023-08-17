@@ -11,9 +11,12 @@ type ButtonPropsType = {
 };
 
 function Button(props: ButtonPropsType) {
-  const allClasses = `${styles["btn"]} ${
+  let allClasses = `${styles["btn"]} ${
     props.className ? props.className : ""
   } ${props.variant === "primary" ? styles["btn--primary"] : ""}`;
+  if (props.variant === "link") {
+    allClasses = allClasses + styles["btn--link"];
+  }
   return (
     <button
       className={allClasses}

@@ -1,1 +1,8 @@
 @use "../../assets/scss/abstracts.scss" as *;
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space48 $space24;
+  padding: $padding-md;
+}

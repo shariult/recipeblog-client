@@ -5,7 +5,7 @@
   &:link,
   &:visited {
     display: inline-block;
-    padding: $padding-s;
+    padding: $padding-sm;
     background-color: $grey-33;
     border: none;
     border-radius: $border-rad-s;
@@ -23,6 +23,16 @@
   &:focus {
     outline: 2px dashed $grey-33;
     outline-offset: 2px;
+  }
+  &--link {
+    padding: 0;
+    background-color: transparent;
+    color: $color-se;
+    &:hover {
+      text-decoration: underline;
+      background-color: transparent;
+      transform: scale(1.03);
+    }
   }
   &--primary {
     background-color: $color-pr;

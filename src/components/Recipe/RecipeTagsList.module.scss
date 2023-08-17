@@ -1,0 +1,16 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+.recipe-tags {
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: $space16;
+    list-style-type: none;
+    list-style-position: inside;
+  }
+  &__item {
+    padding: $padding-category;
+    background-color: $grey-f7;
+    border-radius: $border-rad-s;
+  }
+}

@@ -59,6 +59,16 @@ h6 {
   font-family: $font-heading;
 }
 
+.heading-2 {
+  font-size: $size36;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.heading-3 {
+  font-size: $size24;
+}
+
 // ======= Utility Classes ======= //
 
 $spaceAmounts: (12, 24, 48, 64);
@@ -116,4 +126,56 @@ $spaceAmounts: (12, 24, 48, 64);
 
 .text--center {
   text-align: center;
+}
+
+// ======= Animation Keyframes ======= //
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: 0;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bounceOut {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }

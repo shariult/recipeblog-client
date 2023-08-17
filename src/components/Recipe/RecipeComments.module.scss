@@ -1,0 +1,6 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+.recipe-comments {
+  max-width: 80rem;
+  padding: $padding-sm;
+}

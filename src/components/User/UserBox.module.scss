@@ -1,0 +1,30 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+.user {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: $space16;
+  padding: $padding-sm;
+  &__img-box {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid $grey-f7;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: $shadow-s;
+  }
+  &__img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__author-box {
+  }
+  &__author {
+  }
+  &__time {
+    color: $grey-77;
+  }
+}

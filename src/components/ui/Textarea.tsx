@@ -2,33 +2,31 @@ import React from "react";
 
 import styles from "./Input.module.scss";
 
-type InputPropsType = {
+type TextareaPropsType = {
   children?: React.ReactNode;
-  type: string;
   name: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   onBlur?: () => void;
   className?: string;
   id?: string;
   placeholder?: string;
-  min?: string;
-  max?: string;
-  step?: string;
+  cols?: number;
+  rows?: number;
   required?: string;
   label?: string;
   variant?: string;
   error?: string;
 };
 
-function Input(props: InputPropsType) {
+function Textarea(props: TextareaPropsType) {
   const allGroupClasses =
     props.variant === "inline"
       ? `${styles["form__group"]} ${styles["form__group--inline"]}`
       : `${styles["form__group"]}`;
   const allInputClasses = props.className
-    ? `${styles["form__input"]} ${props.className}`
-    : `${styles["form__input"]}`;
+    ? `${styles["form__textarea"]} ${props.className}`
+    : `${styles["form__textarea"]}`;
   return (
     <div className={allGroupClasses}>
       {props.label && (
@@ -36,20 +34,17 @@ function Input(props: InputPropsType) {
           {props.label}
         </label>
       )}
-      <input
-        type={props.type}
+      <textarea
         name={props.name}
-        value={props.value}
         onChange={props.onChange}
         onBlur={props.onBlur}
         className={allInputClasses}
         id={props.id}
         placeholder={props.placeholder || props.name}
-        min={props.min}
-        max={props.max}
-        step={props.step}
         required={props.required === "true" ? true : false}
-      />
+      >
+        {props.value}
+      </textarea>
       {props.error && (
         <p className={styles["form__input-error"]}>{props.error}</p>
       )}
@@ -57,4 +52,4 @@ function Input(props: InputPropsType) {
   );
 }
 
-export default Input;
+export default Textarea;

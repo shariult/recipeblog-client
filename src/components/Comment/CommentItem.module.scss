@@ -1,0 +1,15 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+.comment {
+  padding: $padding-md;
+  box-shadow: $shadow-s;
+  margin-bottom: $space24;
+  & > *:not(:last-child) {
+    margin-bottom: $space16;
+  }
+  &__text {
+    padding: $padding-sm;
+    background-color: $grey-f7;
+    border-radius: $border-rad-s;
+  }
+}

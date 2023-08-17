@@ -1,8 +1,8 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./Pages/Home";
 import ErrorPage from "./Pages/ErrorPage";
 import LayoutRoot from "./Pages/LayoutRoot";
+import Home from "./Pages/Home";
 import User from "./Pages/User/User";
 import UserProfile from "./Pages/User/UserProfile";
 import Recipe from "./Pages/Recipe/Recipe";
@@ -37,9 +37,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
+    <>
       <RouterProvider router={router} />
-    </div>
+    </>
   );
 }
 

@@ -1,1 +1,98 @@
 @use "../../assets/scss/abstracts.scss" as *;
+
+.recipe-item {
+  flex-basis: calc((100% / 3) - $space24);
+  padding: $padding-sm;
+  padding-top: 0;
+  border-radius: $border-rad-s;
+  box-shadow: $shadow-s;
+  transition: $transition-s;
+  & > *:not(:last-child) {
+    margin-bottom: $space16;
+  }
+  & > *:first-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    transform: scale(1.01);
+  }
+  @include responsive(800) {
+    flex-basis: calc((100% / 2) - $space24);
+  }
+  @include responsive(600) {
+    flex-basis: calc((100% / 1) - $space24);
+  }
+  &__img-box {
+    width: 100%;
+    height: 34rem;
+
+    transform: translateY(-$space16);
+    @include responsive(1200) {
+      height: 25rem;
+    }
+    @include responsive(1000) {
+      height: 20rem;
+    }
+  }
+  &__img {
+    display: inline-block;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-top-right-radius: $border-rad-s;
+    border-top-left-radius: $border-rad-s;
+    box-shadow: $shadow-s;
+  }
+  &__category {
+    display: inline-block;
+    background-color: $color-pr;
+    padding: $padding-category;
+    color: $grey-f7;
+    border: 4px solid $grey-f7;
+    border-radius: $border-rad-s;
+    transform: translate(1rem, -3rem);
+  }
+  &__title {
+    margin-top: $space12;
+  }
+  &__author-box {
+    display: flex;
+    gap: $space12;
+    align-items: center;
+    margin-bottom: $space16;
+  }
+  &__author-img {
+    height: 3.2rem;
+    width: 3.2rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__author-name {
+    text-transform: uppercase;
+  }
+  &__info-box {
+    display: flex;
+  }
+  &__info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $padding-xs;
+    background-color: $grey-f7;
+    border: 1px solid $white;
+    &:first-child {
+      border-top-left-radius: $border-rad-s;
+      border-bottom-left-radius: $border-rad-s;
+    }
+    &:last-child {
+      border-top-right-radius: $border-rad-s;
+      border-bottom-right-radius: $border-rad-s;
+    }
+  }
+  &__icon {
+    margin-top: 2px;
+    display: inline-block;
+    margin-right: $space12;
+  }
+}

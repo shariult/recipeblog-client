@@ -1,7 +1,12 @@
 import React from "react";
+import RecipeList from "../../components/Recipe/RecipeList";
 
 function Recipe() {
-  return <div>Recipe</div>;
+  return (
+    <>
+      <RecipeList />
+    </>
+  );
 }
 
 export default Recipe;
