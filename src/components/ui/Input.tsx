@@ -17,14 +17,16 @@ type InputPropsType = {
   step?: string;
   required?: string;
   label?: string;
-  variant?: string;
+  variant?: "inline" | "notFull";
   error?: string;
 };
 
 function Input(props: InputPropsType) {
   const allGroupClasses =
     props.variant === "inline"
-      ? `${styles["form__group"]} ${styles["form__group--inline"]}`
+      ? `${styles["form__group-inline"]}`
+      : props.variant === "notFull"
+      ? `${styles["form__group-80"]}`
       : `${styles["form__group"]}`;
   const allInputClasses = props.className
     ? `${styles["form__input"]} ${props.className}`
@@ -50,9 +52,7 @@ function Input(props: InputPropsType) {
         step={props.step}
         required={props.required === "true" ? true : false}
       />
-      {props.error && (
-        <p className={styles["form__input-error"]}>{props.error}</p>
-      )}
+      {props.error && <p className={styles["form__error"]}>{props.error}</p>}
     </div>
   );
 }

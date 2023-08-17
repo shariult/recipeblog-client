@@ -1,1 +1,23 @@
 @use "../../assets/scss/abstracts.scss" as *;
+
+.recipe-manage {
+  display: flex;
+  margin: $space48 $space24;
+  border-radius: $border-rad-s;
+  box-shadow: $shadow-m;
+  overflow: hidden;
+  &__img-box {
+    flex-basis: 50%;
+    background-image: url("../../../public/recipes/recipe-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__content {
+    flex-basis: 50%;
+    padding: $padding-lg;
+    & > *:not(:last-child) {
+      margin-bottom: $space16;
+    }
+  }
+}

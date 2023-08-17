@@ -1,0 +1,86 @@
+@use "../../assets/scss/abstracts.scss" as *;
+
+$form-border-width: 2px;
+$form-border-radius: 4px;
+
+.form__group {
+  flex-basis: 100%;
+}
+
+.form__group-inline {
+  flex-basis: calc(50% - (#{$space16} / 2));
+}
+
+.form__label {
+  display: block;
+  margin-bottom: $space12;
+  font-size: inherit;
+  font-weight: bold;
+  transition: $transition-s;
+}
+
+.form__select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  &-menu,
+  &-icon {
+    border: $form-border-width solid transparent;
+    transition: $transition-s;
+  }
+  &-menu {
+    width: 100%;
+    padding: $padding-xs;
+    padding-right: $space32;
+    background: $grey-f7;
+    border-radius: $form-border-radius;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    // appearance: none;
+  }
+  &-icon {
+    width: $size16;
+    height: calc(100% - #{$form-border-width} * 2);
+    padding: $padding-sm;
+    background: $grey-ee;
+    border: none;
+    border-radius: 0 $form-border-radius $form-border-radius 0;
+    position: absolute;
+    top: $form-border-width;
+    right: $form-border-width;
+    pointer-events: none;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: $size16;
+      height: $size16;
+      border: calc(#{$size16} / 2) solid transparent;
+      border-top-color: currentColor;
+      position: absolute;
+      top: calc(50% + #{$size16}/ 4);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: $transition-s;
+    }
+  }
+}
+
+.form__select option {
+  color: inherit;
+}
+.form__select option[value=""][disabled] {
+  display: none;
+}
+
+.form__select-menu:hover + .form__select-icon::after {
+  border-top-color: $color-pr;
+}
+.form__select-menu:focus {
+  border: $form-border-width solid $color-pr;
+  outline: none;
+  box-shadow: $shadow-s;
+}
+.form__select-menu:required:invalid {
+  border: $form-border-width solid $color-se;
+}

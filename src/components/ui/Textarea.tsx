@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Input.module.scss";
+import styles from "./Textarea.module.scss";
 
 type TextareaPropsType = {
   children?: React.ReactNode;
@@ -15,14 +15,14 @@ type TextareaPropsType = {
   rows?: number;
   required?: string;
   label?: string;
-  variant?: string;
+  variant?: "inline";
   error?: string;
 };
 
 function Textarea(props: TextareaPropsType) {
   const allGroupClasses =
     props.variant === "inline"
-      ? `${styles["form__group"]} ${styles["form__group--inline"]}`
+      ? `${styles["form__group-inline"]}`
       : `${styles["form__group"]}`;
   const allInputClasses = props.className
     ? `${styles["form__textarea"]} ${props.className}`
@@ -45,9 +45,7 @@ function Textarea(props: TextareaPropsType) {
       >
         {props.value}
       </textarea>
-      {props.error && (
-        <p className={styles["form__input-error"]}>{props.error}</p>
-      )}
+      {props.error && <p className={styles["form__error"]}>{props.error}</p>}
     </div>
   );
 }
