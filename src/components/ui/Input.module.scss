@@ -1,4 +1,4 @@
-@use "../../assets/scss/abstracts.scss" as *;
+@use "../assets/scss/abstracts.scss" as *;
 
 $form-border-width: 2px;
 $form-border-radius: 4px;
@@ -25,7 +25,7 @@ $form-border-radius: 4px;
 
 .form__error {
   margin: $space8;
-  color: $color-se;
+  color: $color-danger;
 }
 
 .form__input {
@@ -47,7 +47,7 @@ $form-border-radius: 4px;
   }
 
   &:focus:required:invalid {
-    border-bottom: $form-border-width solid $color-se;
+    border-bottom: $form-border-width solid $color-danger;
   }
 
   &::-webkit-input-placeholder {

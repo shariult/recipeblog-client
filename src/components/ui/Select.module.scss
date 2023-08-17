@@ -82,5 +82,5 @@ $form-border-radius: 4px;
   box-shadow: $shadow-s;
 }
 .form__select-menu:required:invalid {
-  border: $form-border-width solid $color-se;
+  border: $form-border-width solid $color-danger;
 }
