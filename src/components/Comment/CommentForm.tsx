@@ -10,7 +10,9 @@ function CommentForm() {
     <Form className={styles["comment-form"]}>
       <Textarea name="comment" required="true"></Textarea>
       <div className="form__group">
-        <Button variant="primary">Comment</Button>
+        <Button type="submit" variant="primary">
+          Comment
+        </Button>
       </div>
     </Form>
   );
