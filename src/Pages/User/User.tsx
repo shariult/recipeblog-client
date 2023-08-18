@@ -7,6 +7,7 @@ import Button from "../../components/ui/Button";
 import Textarea from "../../components/ui/Textarea";
 
 import styles from "./User.module.scss";
+import Select from "../../components/ui/Select";
 
 const animationClasses = {
   enter: "",
@@ -18,7 +19,7 @@ const animationClasses = {
 };
 const animationTimeout = {
   enter: 500,
-  exit: 500,
+  exit: 300,
 };
 
 function User() {
@@ -28,9 +29,10 @@ function User() {
   return (
     <section className={styles["section-user"]}>
       <div className={styles["user"]}>
-        <h2 className="heading-2">Sign Up</h2>
+        <h2 className="heading-2">Sign {isModeSignUp ? "Up" : "In"}</h2>
         <Form>
           <Input type="text" name="username" />
+          <Input type="password" name="password" />
           <CSSTransition
             in={isModeSignUp}
             classNames={animationClasses}
@@ -40,7 +42,6 @@ function User() {
           >
             <Input type="text" name="fullname" />
           </CSSTransition>
-          <Input type="password" name="password" />
           <CSSTransition
             in={isModeSignUp}
             classNames={animationClasses}
@@ -58,6 +59,37 @@ function User() {
             unmountOnExit
           >
             <Input type="text" name="image" />
+          </CSSTransition>
+          <CSSTransition
+            in={isModeSignUp}
+            classNames={animationClasses}
+            timeout={animationTimeout}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Input type="text" name="country" />
+          </CSSTransition>
+          <CSSTransition
+            in={isModeSignUp}
+            classNames={animationClasses}
+            timeout={animationTimeout}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Input type="text" name="occupation" variant="inline" />
+          </CSSTransition>
+          <CSSTransition
+            in={isModeSignUp}
+            classNames={animationClasses}
+            timeout={animationTimeout}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Select name="gender" variant="inline">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </Select>
           </CSSTransition>
           <CSSTransition
             in={isModeSignUp}

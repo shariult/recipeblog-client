@@ -1,10 +1,11 @@
 @use "../../assets/scss/abstracts.scss" as *;
 
 .section-user {
+  margin: $space16;
 }
 
 .user {
-  max-width: 80rem;
+  max-width: 60rem;
   padding: $padding-lg;
   margin: $space48 auto;
   border-radius: $border-rad-s;
@@ -40,30 +41,30 @@
 }
 
 .animateIn {
-  transform-origin: top left;
+  transform-origin: top;
   animation: fadeIn 0.5s ease-out forwards;
 }
 .animateOut {
-  transform-origin: top left;
+  transform-origin: top;
   animation: fadeOut 0.5s ease-out forwards;
 }
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: scale(0);
+    transform: scaleY(0);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: scaleY(1);
   }
 }
 @keyframes fadeOut {
   0% {
     opacity: 1;
-    transform: scale(1);
+    transform: scaleY(1);
   }
   100% {
     opacity: 0;
-    transform: scale(0);
+    transform: scaleY(0);
   }
 }
