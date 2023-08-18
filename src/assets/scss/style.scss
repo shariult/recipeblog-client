@@ -128,7 +128,7 @@ $spaceAmounts: (12, 24, 48, 64);
   text-align: center;
 }
 
-// ======= Animation Keyframes ======= //
+// ======= Animation ======= //
 
 @keyframes fadeIn {
   0% {
@@ -147,7 +147,36 @@ $spaceAmounts: (12, 24, 48, 64);
   }
   100% {
     opacity: 0;
-    transform: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-15%);
   }
 }
 

@@ -1,1 +1,69 @@
 @use "../../assets/scss/abstracts.scss" as *;
+
+.section-user {
+}
+
+.user {
+  max-width: 80rem;
+  padding: $padding-lg;
+  margin: $space48 auto;
+  border-radius: $border-rad-s;
+  box-shadow: $shadow-s;
+  h2 {
+    margin-bottom: $space16;
+  }
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      display: inline-block;
+      border: none;
+      margin-left: $space12;
+      color: $grey-44;
+      font-size: $size16;
+      text-decoration: none;
+      cursor: pointer;
+      transition: $transition-s;
+      outline: 2px dashed transparent;
+    }
+    &:hover {
+      color: $color-pr;
+      transform: scale(1.05);
+      text-decoration: underline;
+    }
+    &:active,
+    &:focus {
+      outline: 2px dashed $grey-33;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.animateIn {
+  transform-origin: top left;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+.animateOut {
+  transform-origin: top left;
+  animation: fadeOut 0.5s ease-out forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
