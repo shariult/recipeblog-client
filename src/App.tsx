@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./Pages/ErrorPage";
 import LayoutRoot from "./Pages/LayoutRoot";
 import Home from "./Pages/Home";
-import User from "./Pages/User/User";
+import Authentication from "./Pages/User/Authentication";
 import Profile from "./Pages/User/Profile";
 import Recipe from "./Pages/Recipe/Recipe";
 import RecipeDetails from "./Pages/Recipe/RecipeDetails";
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/user",
         children: [
-          { index: true, element: <User /> },
+          { index: true, element: <Authentication /> },
           { path: "/user/profile", element: <Profile /> },
         ],
       },

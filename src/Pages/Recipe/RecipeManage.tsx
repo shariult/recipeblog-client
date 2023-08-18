@@ -30,7 +30,7 @@ function RecipeManage() {
             variant="inline"
           />
           <Select name="category" variant="inline">
-            <option value="" disabled>
+            <option value="" disabled selected>
               Select Categories
             </option>
             <option value="breakfast">Breakfast</option>

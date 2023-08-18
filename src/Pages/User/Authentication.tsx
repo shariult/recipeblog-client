@@ -1,13 +1,13 @@
 import React from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import CSSTransition from "react-transition-group/CSSTransition";
+import Button from "../../components/ui/Button";
 import Form from "../../components/ui/Form";
 import Input from "../../components/ui/Input";
-import Button from "../../components/ui/Button";
+import Select from "../../components/ui/Select";
 import Textarea from "../../components/ui/Textarea";
 
-import styles from "./User.module.scss";
-import Select from "../../components/ui/Select";
+import styles from "./Authentication.module.scss";
 
 const animationClasses = {
   enter: "",
@@ -22,7 +22,7 @@ const animationTimeout = {
   exit: 300,
 };
 
-function User() {
+function Authentication() {
   const [searchParams] = useSearchParams();
   const isModeSignUp = searchParams.get("mode") === "signup";
 
@@ -86,6 +86,9 @@ function User() {
             unmountOnExit
           >
             <Select name="gender" variant="inline">
+              <option value="" disabled selected>
+                Select Gender
+              </option>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="other">Other</option>
@@ -117,4 +120,4 @@ function User() {
   );
 }
 
-export default User;
+export default Authentication;
