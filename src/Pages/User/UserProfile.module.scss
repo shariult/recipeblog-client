@@ -3,45 +3,62 @@
 .profile {
   &__header {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: $space24;
-    justify-content: space-between;
     padding: $padding-lg;
     @include responsive(800) {
       flex-direction: column;
+      align-items: center;
     }
   }
   &__img-box {
-    display: flex;
-    justify-content: center;
-    flex-basis: 30%;
+    flex-basis: 24rem;
+    height: 24rem;
   }
   &__img {
-    display: block;
-    max-width: 24rem;
-    max-height: 24rem;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: -2rem;
   }
   &__info {
-    flex-basis: 70%;
-    & > *:not(:last-child) {
-      margin-bottom: $space16;
-    }
+    flex-basis: 60%;
+    padding: $padding-xxl;
+    padding-left: $space80;
+    border-radius: $border-rad-s;
+    background-color: $grey-f7;
   }
-  &__info-box {
+  &__info h2 {
+    margin-bottom: $space16;
+  }
+  &__list {
+    list-style-type: none;
+    list-style-position: inside;
+    margin-bottom: $space12;
+    border-top: 2px solid $grey-ee;
+    border-bottom: 2px solid $grey-ee;
+  }
+  &__item {
+    display: flex;
+    gap: $space16;
+    padding: $padding-sm;
+    padding-left: 0;
   }
   &__label {
     color: $grey-77;
+    width: 10rem;
   }
   &__text {
     font-size: $size18;
   }
   &__recipes {
-    padding: $padding-lg;
+    // padding: $padding-lg;
   }
   &__recipes-title {
-    padding: $padding-lg;
+    padding: $padding-sm;
     margin: $space16 0;
+    color: $color-pr;
   }
 }
