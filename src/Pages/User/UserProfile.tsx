@@ -19,7 +19,7 @@ function UserProfile() {
           <ul className={styles["profile__list"]}>
             <li className={styles["profile__item"]}>
               <span className={styles["profile__label"]}>Username</span>
-              <p className={styles["profile__text"]}>@Muhammed</p>
+              <p className={styles["profile__text"]}>Muhammed</p>
             </li>
             <li className={styles["profile__item"]}>
               <span className={styles["profile__label"]}>Email</span>
@@ -43,10 +43,13 @@ function UserProfile() {
           </p>
         </div>
       </div>
-      <div className={styles["profile__recipes"]}>
-        <h3 className={`heading-3 ${styles["profile__recipes-title"]}`}>
-          Recipes
-        </h3>
+      <div className={styles["recipes"]}>
+        <div className={styles["recipes__nav"]}>
+          <ul className={styles["recipes__nav-list"]}>
+            <li className={styles["recipes__nav-item"]}>Owned Recipes</li>
+            <li className={styles["recipes__nav-item"]}>Saved Recipes</li>
+          </ul>
+        </div>
         <RecipeList />
       </div>
     </section>
