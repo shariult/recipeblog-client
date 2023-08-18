@@ -11,8 +11,8 @@ $form-border-radius: 4px;
   flex-basis: calc(50% - (#{$space16} / 2));
 }
 
-.form__group-80 {
-  flex-basis: 80%;
+.form__not-full {
+  flex-basis: 77%;
 }
 
 .form__label {

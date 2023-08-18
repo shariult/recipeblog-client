@@ -26,7 +26,7 @@ function Input(props: InputPropsType) {
     props.variant === "inline"
       ? `${styles["form__group-inline"]}`
       : props.variant === "notFull"
-      ? `${styles["form__group-80"]}`
+      ? `${styles["form__not-full"]}`
       : `${styles["form__group"]}`;
   const allInputClasses = props.className
     ? `${styles["form__input"]} ${props.className}`
