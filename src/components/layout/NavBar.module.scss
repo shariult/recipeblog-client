@@ -85,7 +85,7 @@
       color: $grey-33;
     }
     &--active {
-      font-weight: bold;
+      color: $color-pr !important;
       text-decoration: underline !important;
     }
   }

@@ -37,6 +37,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: $padding-sm;
     background-color: $grey-f7;
     border: 4px solid $white;
     border-radius: $border-rad-s;
@@ -49,6 +50,7 @@
     color: $grey-77;
   }
   &__info-icon {
+    color: $grey-77;
     font-size: $size36;
   }
   &__user-box {

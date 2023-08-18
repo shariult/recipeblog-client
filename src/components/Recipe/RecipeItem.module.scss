@@ -79,8 +79,8 @@
     justify-content: center;
     align-items: center;
     padding: $padding-xs;
-    background-color: $grey-f7;
     border: 1px solid $white;
+    background-color: $grey-f7;
     &:first-child {
       border-top-left-radius: $border-rad-s;
       border-bottom-left-radius: $border-rad-s;
@@ -94,5 +94,6 @@
     margin-top: 2px;
     display: inline-block;
     margin-right: $space12;
+    color: $color-pr;
   }
 }

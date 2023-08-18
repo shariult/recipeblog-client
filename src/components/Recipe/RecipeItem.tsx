@@ -19,7 +19,6 @@ function RecipeItem() {
       <h3 className={`heading-3 ${styles["recipe-item__title"]}`}>Recipe 1</h3>
       <UserBox />
       <br />
-      <Button variant="link">&larr; Read More</Button>
       <div className={styles["recipe-item__info-box"]}>
         <div className={styles["recipe-item__info"]}>
           <span className={styles["recipe-item__icon"]}>
@@ -34,6 +33,9 @@ function RecipeItem() {
           <span>3 hours</span>
         </div>
       </div>
+      <Button variant="primary" className="mb-12">
+        Read More &rarr;
+      </Button>
     </div>
   );
 }
