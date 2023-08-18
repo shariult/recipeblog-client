@@ -1,0 +1,39 @@
+@use "../../../assets/scss/abstracts.scss" as *;
+
+.methods {
+  flex-basis: 60%;
+  padding: $padding-lg;
+  & > *:not(:last-child) {
+    margin-bottom: $space16;
+  }
+  &__list {
+    list-style-position: inside;
+  }
+  &__item {
+    &::marker {
+      color: $color-pr;
+    }
+  }
+  &__sub {
+    display: inline-block;
+    width: 95%;
+    color: $color-pr;
+    font-size: $size20;
+    position: relative;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 90%;
+      height: 1px;
+      background-color: $color-pr;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+  &__text {
+    padding: $padding-sm;
+    padding-top: 0;
+  }
+}

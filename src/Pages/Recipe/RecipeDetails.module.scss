@@ -1,1 +1,15 @@
 @use "../../assets/scss/abstracts.scss" as *;
+
+.recipe {
+  &__body {
+    display: flex;
+    font-size: $size18;
+    @include responsive(800) {
+      flex-direction: column;
+    }
+  }
+  &__comments {
+    max-width: 80rem;
+    padding: $padding-sm;
+  }
+}

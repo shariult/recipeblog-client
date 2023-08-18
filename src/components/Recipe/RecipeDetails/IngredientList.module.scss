@@ -1,0 +1,16 @@
+@use "../../../assets/scss/abstracts.scss" as *;
+
+.ingredients {
+  flex-basis: 40%;
+  padding: $padding-lg;
+  &__list {
+    list-style-type: none;
+    list-style-position: inside;
+  }
+  &__item {
+    padding: $space12 0;
+    &:not(:last-child) {
+      border-bottom: 2px solid $grey-f7;
+    }
+  }
+}

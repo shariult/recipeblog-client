@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaClock, FaPlusCircle, FaUserAlt } from "react-icons/fa";
 import { PiGaugeFill } from "react-icons/pi";
-import Button from "../../components/ui/Button";
+import Button from "../../../components/ui/Button";
 
 import styles from "./RecipeHeader.module.scss";
 
 function RecipeHeader() {
   return (
-    <section className={styles["recipe-header"]}>
+    <div className={styles["recipe-header"]}>
       <div className={styles["recipe-header__img-box"]}>
         <img
           src="/recipes/recipe-1.jpg"
@@ -64,7 +64,7 @@ function RecipeHeader() {
           </Button>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
