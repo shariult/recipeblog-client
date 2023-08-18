@@ -4,7 +4,7 @@ import ErrorPage from "./Pages/ErrorPage";
 import LayoutRoot from "./Pages/LayoutRoot";
 import Home from "./Pages/Home";
 import User from "./Pages/User/User";
-import UserProfile from "./Pages/User/UserProfile";
+import Profile from "./Pages/User/Profile";
 import Recipe from "./Pages/Recipe/Recipe";
 import RecipeDetails from "./Pages/Recipe/RecipeDetails";
 import RecipeManage from "./Pages/Recipe/RecipeManage";
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         path: "/user",
         children: [
           { index: true, element: <User /> },
-          { path: "/user/profile", element: <UserProfile /> },
+          { path: "/user/profile", element: <Profile /> },
         ],
       },
       {

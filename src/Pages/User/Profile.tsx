@@ -1,9 +1,9 @@
 import React from "react";
-
-import styles from "./UserProfile.module.scss";
 import RecipeList from "../../components/Recipe/RecipeList";
 
-function UserProfile() {
+import styles from "./Profile.module.scss";
+
+function Profile() {
   return (
     <section className={styles["profile"]}>
       <div className={styles["profile__header"]}>
@@ -56,4 +56,4 @@ function UserProfile() {
   );
 }
 
-export default UserProfile;
+export default Profile;
