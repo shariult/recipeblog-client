@@ -1,5 +1,5 @@
 import React from "react";
-import RecipeTagsList from "./RecipeTagsList";
+import TagList from "../ui/TagList";
 
 import styles from "./RecipeBody.module.scss";
 
@@ -85,7 +85,7 @@ function RecipeBody() {
           </li>
         </ul>
         <h3 className="heading-3">Tags</h3>
-        <RecipeTagsList />
+        <TagList />
       </div>
     </div>
   );
