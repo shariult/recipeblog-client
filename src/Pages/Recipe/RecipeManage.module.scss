@@ -6,6 +6,9 @@
   border-radius: $border-rad-s;
   box-shadow: $shadow-m;
   overflow: hidden;
+  @include responsive(800) {
+    flex-direction: column;
+  }
   &__img-box {
     flex-basis: 50%;
     background-image: url("../../../public/recipes/recipe-1.jpg");

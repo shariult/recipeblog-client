@@ -19,7 +19,7 @@ function NavBar() {
       <Container className={styles["navbar__nav"]}>
         <div className={styles["navbar__logo"]}>
           <Link to="/" className={styles["navbar__logo-link"]}>
-            RecipeLog
+            Recipe.Log
           </Link>
         </div>
         <ul

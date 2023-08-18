@@ -39,7 +39,7 @@
     @include responsive(800) {
       flex-flow: column nowrap;
       width: 100%;
-      background: $grey-ee;
+      background: $grey-f7;
       position: absolute;
       top: 100%;
       right: 0;
@@ -50,9 +50,6 @@
     }
   }
   &__item {
-    @include responsive(800) {
-      padding: $padding-md;
-    }
   }
   &__link {
     &,
@@ -84,9 +81,11 @@
       outline: 2px dashed $grey-f7;
       color: $grey-33;
     }
-    &--active {
-      color: $color-pr !important;
-      text-decoration: underline !important;
+    &--active,
+    &--active:link,
+    &--active:visited {
+      background-color: $color-pr;
+      color: $grey-f7;
     }
   }
   &__toggle {
@@ -94,7 +93,8 @@
     display: none;
     height: 5rem;
     width: 5rem;
-    background: $grey-77;
+    margin: $space12 0;
+    background: $color-pr;
     border-radius: $border-rad-s;
     cursor: pointer;
     @include responsive(800) {
